@@ -1,0 +1,142 @@
+/* 1. Global Styles and Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f5; /* Light gray background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 2. Main Quiz Container */
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.quiz-container h1 {
+    color: #007bff; /* Blue title */
+    margin-bottom: 25px;
+}
+
+/* NEW: Quiz Header (Timer and Question Count) */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#question-number {
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+}
+
+#timer {
+    background-color: #ffc107; /* Yellow background for timer */
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Highlight for low time */
+.timer.low-time {
+    background-color: #dc3545; /* Red background */
+    color: white;
+}
+
+#question {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* 3. Option Buttons */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    background-color: #f8f9fa; /* Light grey button */
+    color: #333;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.1s;
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #e2e6ea;
+    border-color: #b8c1cb;
+}
+/* Disable hover effects when buttons are disabled */
+.option-button:disabled {
+    cursor: default;
+}
+
+/* Styles for when an option is selected (Success/Correct) */
+.option-button.correct {
+    background-color: #28a745; /* Green */
+    color: white;
+    border-color: #1e7e34;
+}
+
+/* Styles for when an option is selected (Failure/Incorrect) */
+.option-button.incorrect {
+    background-color: #dc3545; /* Red */
+    color: white;
+    border-color: #bd2130;
+}
+
+/* 4. Next Button */
+.next-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    /* Initially hide the Next button */
+    display: none; 
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+}
+
+/* 5. Feedback Text */
+.feedback-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 25px; /* Give it space even when empty */
+}
+
+/* 6. Responsive Design */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 20px;
+    }
+    .next-button {
+        width: 100%;
+    }
+}

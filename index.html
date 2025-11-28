@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>General Knowledge Quiz</h1>
+        
+        <!-- NEW HEADER FOR QUESTION NUMBER AND TIMER -->
+        <div class="quiz-header">
+            <p id="question-number" class="counter">Question 1 of 4</p>
+            <div id="timer" class="timer">30s</div>
+        </div>
+        
+        <div id="quiz">
+            <h2 id="question">Question Text Goes Here</h2>
+            <div id="options-container" class="options-container">
+                <button class="option-button">Option 1</button>
+                <button class="option-button">Option 2</button>
+                <button class="option-button">Option 3</button>
+                <button class="option-button">Option 4</button>
+            </div>
+            <button id="next-button" class="next-button">Next Question</button>
+            <p id="feedback" class="feedback-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
